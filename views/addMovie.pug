@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1.text-center Ajouter un Nouveau Film
+
+  // Inclure le fichier CSS de Bootstrap
+  link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap.min.css')
+
+  link(rel='stylesheet', href='/style.css')
+
+
+  .container
+    .row
+      .col-md-4.mx-auto.my-5
+        h2.text-center Ajouter un Nouveau Film
+
+        form(action='/movies', method='post', class='movie-form')
+          fieldset
+            label(for='titre') Titre:
+            input(type='text', name='titre', class='form-control')
+            br
+            label(for='realisateur') Réalisateur:
+            input(type='text', name='realisateur', class='form-control')
+            br
+            label(for='description') Description:
+            textarea(name='description', class='form-control')
+            br
+            label(for='dateSortie') Date de Sortie:
+            input(type='date', name='dateSortie', class='form-control')
+            br
+            button(type='submit', class='btn btn-primary btn-block mt-3') Ajouter

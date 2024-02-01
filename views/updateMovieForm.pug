@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1 Mise à Jour du Film
+
+  form(action=`/api/update-movie/${movie._id}`, method="put")
+    label(for="titre") Nouveau Titre du film:
+    input(type="text", name="titre", value=movie.titre, required)
+
+    label(for="realisateur") Nouveau Réalisateur:
+    input(type="text", name="realisateur", value=movie.realisateur, required)
+
+    label(for="description") Nouvelle description:
+    input(type="text", name="description", value=movie.description, required)
+
+    label(for="dateSortie") Nouvelle Date de Sortie:
+    input(type="date", name="dateSortie", value=movie.dateSortie.toISOString().substr(0, 10), required)
+
+
+    button(type="submit") Mettre à Jour le fim

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Détails du Film
+
+  h2= movie.titre
+  p Réalisateur: #{movie.realisateur}
+  p Description: #{movie.description}
+  p Date de Sortie: #{movie.dateSortie.toLocaleDateString()}
+
