@@ -1,4 +1,3 @@
-
 # Cinéma en Ligne
 
 ## Description du Projet
